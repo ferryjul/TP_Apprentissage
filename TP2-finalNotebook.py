@@ -219,7 +219,7 @@ for solv in ['sgd', 'adam', 'lbfgs']:
 
 # ## Comparaison des différentes fonctions d'activation proposées
 
-# In[ ]:
+# In[7]:
 
 
 # On se place dans le scénario le plus favorable trouvé précédemment : 
@@ -295,11 +295,11 @@ import time
 from sklearn import neural_network
 
 alphas = [0.00001,0.0001,0.001,0.01]
+trainScores = []
+testScores = []
+times = []
 for alph in alphas:
     i = 20
-    trainScores = []
-    testScores = []
-    times = []
     nbByLayer = 60
     nbFinal = 10
     layers_param0 = (np.ones((i,), dtype=int)*nbByLayer).tolist()
